@@ -2,7 +2,7 @@ import React from "react";
 
 import { PageView } from "../components/layout";
 import { Card, Skeleton } from "@components/common";
-import { SortDirection, useFetchDaos } from "@daobox/use-aragon";
+import { useFetchDaos } from "@daobox/use-aragon";
 import { Flex, Metric, Text } from "@tremor/react";
 import { Avatar } from "flowbite-react";
 import { ipfsUriToUrl } from "@utils/strings";
