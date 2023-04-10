@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@aragon/osx-ethers': ^1.2.1
   '@aragon/sdk-client': ^1.4.0
-  '@daobox/use-aragon': 0.0.5-beta.3
+  '@daobox/use-aragon': 0.0.5-beta.4
   '@headlessui/react': ^1.7.13
   '@heroicons/react': ^2.0.17
   '@iconify/react': ^4.1.0
@@ -40,7 +40,7 @@ specifiers:
 dependencies:
   '@aragon/osx-ethers': 1.2.1
   '@aragon/sdk-client': 1.4.0_encoding@0.1.13
-  '@daobox/use-aragon': 0.0.5-beta.3_a7wv4cnwkgr3ahbh5e3cb2iyfy
+  '@daobox/use-aragon': 0.0.5-beta.4_bzguyvqzszxxr3wi4fwxsuz3ne
   '@headlessui/react': 1.7.13_biqbaboplfbrettd7655fr4n2y
   '@heroicons/react': 2.0.17_react@18.2.0
   '@rainbow-me/rainbowkit': 0.12.5_b6mmpbvqmrykjtuhys6zmwlwze
@@ -335,10 +335,8 @@ packages:
     dependencies:
       '@jridgewell/trace-mapping': 0.3.9
 
-  /@daobox/use-aragon/0.0.5-beta.3_a7wv4cnwkgr3ahbh5e3cb2iyfy:
-    resolution: {integrity: sha512-bhilZnOsOW9zr/Lttgo+Gu4Lul02TNuNNeWeA63Ttgs3t4xKHl6MiHmxc9Q3vXXc6kVhWJHaYI4jxTOPqoVIwg==}
-    peerDependencies:
-      wagmi: ~0.11.7
+  /@daobox/use-aragon/0.0.5-beta.4_bzguyvqzszxxr3wi4fwxsuz3ne:
+    resolution: {integrity: sha512-uGYVd8Kthb3KlEUXhZImWBX2p+RGpnvTA//Pd3LWVTYaaiRv7ZYuJiWaJCvo2GLuNQB6BbMe+NErz3WtqU/jTw==}
     dependencies:
       '@aragon/osx-ethers': 1.2.1
       '@aragon/sdk-client': 1.4.0_encoding@0.1.13
@@ -348,7 +346,6 @@ packages:
       ethers: 5.7.2
       graphql: 16.6.0
       graphql-request: 5.2.0_rjjjs2nwgns3bcvnnqb5eu5nry
-      wagmi: 0.12.10_qxdrjrzn77aqut7ilxc75nkaka
       zod: 3.21.4
     transitivePeerDependencies:
       - '@types/react'

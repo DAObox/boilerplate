@@ -8,15 +8,18 @@ import { AragonProvider } from "@daobox/use-aragon";
 import { chains, client } from "../config/wagmiConfig";
 import AppShell from "../components/layout/AppShell";
 import { Toaster } from "react-hot-toast";
+import { useIsMounted } from "hooks";
 
 function App({ Component, pageProps }: AppProps) {
-  const [mounted, setMounted] = React.useState(false);
-  React.useEffect(() => setMounted(true), []);
+  // this is a hack to prevent the app from rendering on the server before the client
+  const isMounted = useIsMounted();
+
   return (
     <WagmiConfig client={client}>
       <RainbowKitProvider chains={chains} showRecentTransactions={true}>
         <AragonProvider>
-          {mounted && (
+          {/* only render the app after the client has mounted */}
+          {isMounted && (
             <AppShell>
               <Component {...pageProps} />
             </AppShell>

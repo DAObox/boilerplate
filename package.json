@@ -12,7 +12,7 @@
   "dependencies": {
     "@aragon/osx-ethers": "^1.2.1",
     "@aragon/sdk-client": "^1.4.0",
-    "@daobox/use-aragon": "0.0.5-beta.3",
+    "@daobox/use-aragon": "0.0.5-beta.4",
     "@headlessui/react": "^1.7.13",
     "@heroicons/react": "^2.0.17",
     "@rainbow-me/rainbowkit": "~0.12.1",

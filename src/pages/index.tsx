@@ -2,14 +2,15 @@ import React from "react";
 
 import { PageView } from "../components/layout";
 import { Card, Skeleton } from "@components/common";
-import { useFetchDaos } from "@daobox/use-aragon";
+import { SortDirection, useFetchDaos } from "@daobox/use-aragon";
 import { Flex, Metric, Text } from "@tremor/react";
 import { Avatar } from "flowbite-react";
 import { ipfsUriToUrl } from "@utils/strings";
 import { useNetwork } from "wagmi";
 
 const Index = () => {
-  const { data } = useFetchDaos({ limit: 10 });
+  // 01: https://use-aragon.daobox.app/useFetchDaos
+  const { data } = useFetchDaos();
 
   return (
     <PageView>
