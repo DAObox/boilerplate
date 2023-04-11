@@ -1,26 +1,8 @@
-import React, { useState } from "react";
-import { BaseModal } from "./BaseModal";
-import { TextInput } from "flowbite-react";
-import { Button } from "@tremor/react";
+import React from "react";
+import { TextInput, Button } from "@tremor/react";
+import { BaseModal } from ".";
 
-interface DepositModalProps {
-  isOpen: boolean;
-  setIsOpen: (open: boolean) => void;
-  onDeposit: (amount: number) => void;
-}
-
-export const DepositModal: React.FC<DepositModalProps> = ({ isOpen, setIsOpen, onDeposit }) => {
-  const [amount, setAmount] = useState("");
-
-  const handleDeposit = () => {
-    const parsedAmount = parseFloat(amount);
-    console.log(parsedAmount);
-    if (!isNaN(parsedAmount) && parsedAmount > 0) {
-      onDeposit(parsedAmount);
-      setIsOpen(false);
-    }
-  };
-
+export function DepositModal({ isOpen, setIsOpen, amount, setAmount, onDeposit }: any) {
   return (
     <BaseModal
       title="Deposit Ethereum"
@@ -31,20 +13,14 @@ export const DepositModal: React.FC<DepositModalProps> = ({ isOpen, setIsOpen, o
       <div className="my-4 flex w-96 items-center justify-center">
         <TextInput
           id="depositAmount"
-          placeholder="0.00"
+          placeholder="Ξ 0.00"
           required
-          addon="Ξ"
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
           className="mr-2 flex-grow"
         />
-        <Button
-          onClick={handleDeposit}
-          className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
-        >
-          Submit
-        </Button>
+        <Button onClick={() => onDeposit()}>Submit</Button>
       </div>
     </BaseModal>
   );
-};
+}

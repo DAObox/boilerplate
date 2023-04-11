@@ -1,3 +1,5 @@
-export const daoAddress = "0x6f07aa7af27e0e06a08a1a17e04c4b0eb11300ab";
-export const votingAddress = "0x8eaf189dbe3524667d25684645aba1c71c02d8db";
-export const votingToken = "0xdd6067e741e79ea707d5185f72e52bc6a9784fd1";
+export const ONE_DAY = new Date(new Date().getTime() + 1000 * 60 * 60 * 24 * 1);
+
+export const daoAddress = "0xce780fea1c950a29769b4f10817a9c51154d12af";
+export const votingAddress = "0xc41e25d5e7cf5457b635d94c2262f914bb9d36e8";
+export const votingToken = "0x35723a37d9960c95deea91179d6ff5d3363c0c81";
